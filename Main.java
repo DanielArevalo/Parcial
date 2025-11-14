@@ -18,25 +18,19 @@ public class Main {
             return;
         }
 
-        // 2. Crear relaciones iniciales (las del enunciado)
         crearRelacionesIniciales(graph);
 
-        // 3. Aplicar operaciones del enunciado (ejemplo):
-        // - agregar estudiantes Luisa y Manuel
         graph.addStudent(new Student("111", "Luisa Fernandez", 4.6));
         graph.addStudent(new Student("112", "Manuel Ortiz", 4.7));
 
-        // - eliminar estudiantes Hector Diaz y Karina Silva
         graph.removeStudent("Hector Diaz");
         graph.removeStudent("Karina Silva");
 
-        // - agregar relación Luisa – Manuel
         graph.addRelation("Luisa Fernandez", "Manuel Ortiz");
 
         graph.removeRelation("Hector Diaz", "Isabel Gomez");
         graph.removeRelation("Julian Castro", "Karina Silva");
 
-        // 4. Menú interactivo
         int opc;
         do {
             System.out.println("\n===== MENU ESTUDIANTES-GRAFO =====");
